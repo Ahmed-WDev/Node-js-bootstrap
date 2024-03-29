@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <script src="../js/color-modes.js"></script>
+    <link
+      rel="stylesheet"
+      href="../bootstrap-icons-1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../css/mystyle.css">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.122.0" />
+    <title>View Project</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/light-dark.css">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/sidebars.css" rel="stylesheet" />
+  </head>
+  <body>
+    <%- include('../components/light-dark.ejs') %>
+
+    <main class="d-flex flex-nowrap">
+      <%- include('../components/sidebar.ejs',{currentPage: "view"}) %>
+
+      <div class="w-100">
+        <%- include('../components/navbar.ejs') %>
+
+        <nav style="width: 85%;" class="mt-4 mx-3 d-flex flex-wrap justify-content-between " aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><%= obj.FirstName %> <%= obj.LastName %></li>
+          </ol>
+          <p class="me-md-3"><span class="fw-bolder fs-5">Id:</span> <%= obj._id %></p>
+        </nav>
+
+        <table style="width: 85% " class="table table-striped table-bordered mt-5 ms-2">
+
+          <tbody>
+            <tr>
+              <td colspan="2">First Name</td>
+              <td colspan="2"><%= obj.FirstName %></td>
+            </tr>
+            <tr>
+              <td colspan="2">Last Name</td>
+              <td colspan="2"><%= obj.LastName %></td>
+            </tr>
+            <tr>
+              <td colspan="2">Telephone</td>
+              <td colspan="2"><%= obj.PhoneNumber %></td>
+            </tr>
+            <tr>
+              <td colspan="2">Email</td>
+              <td colspan="2"><%= obj.Email %></td>
+            </tr>
+            <tr>
+              <td colspan="2">Gender</td>
+              <td colspan="2"><%= obj.Gender %></td>
+            </tr>
+            <tr>
+              <td colspan="2">Age</td>
+              <td colspan="2"><%= obj.Age %></td>
+            </tr>
+            <tr>
+              <td colspan="2">Country</td>
+              <td colspan="2"><%= obj.Country %></td>
+            </tr>
+            <tr>
+              <td colspan="2">Created On</td>
+              <td colspan="2"><%=moment( obj.createdAt ).fromNow(); %></td>
+            </tr>
+            <tr>
+              <td colspan="2">Last Update</td>
+              <td colspan="2"><%=moment( obj.updatedAt ).fromNow(); %></td>
+            </tr>
+          </tbody>
+        </table>
+
+        
+      </div>
+    </main>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <script src="../js/sidebars.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

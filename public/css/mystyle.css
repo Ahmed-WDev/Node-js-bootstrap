@@ -1,0 +1,35 @@
+.bi-list::before {
+  transform: scaleX(1.4);
+  font-size: 25px;
+}
+main .mybutton:hover{
+  border: 1px solid rgb(152, 205, 226);
+}
+.sidebar{
+  width: 280px;
+  transition: 0.4s;
+}
+.small-sidebar{
+  width: 77px;
+}
+.small-sidebar .text-delete{
+  display: none;
+}
+.bi-lightning-charge::before {
+  margin-left: 0.5rem;
+}
+.small-sidebar .bi-lightning-charge::before {
+  margin-left: 0.5rem;
+  margin-top: 50px;
+}
+span.close{
+  font-size: 21px;
+}
+.small-sidebar .bi-x-square::before {
+  content: "\F137";
+}
+
+.hide{
+  display: none;
+}
+
